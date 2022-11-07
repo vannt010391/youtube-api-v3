@@ -1,0 +1,13 @@
+{% extends "homepage/base.html" %}
+{% block content %}
+<div class="user-form-group">
+   <form action="/limit/" class="user-form" method="POST">
+      {% csrf_token %}
+      <p style="color: red;">{{data}}<p>
+      <a href={% url "homepage:homepage" %}><p>Go back HomePage</p></a>
+      <div class="form-button" ><button type="submit" disabled>Download</button></div>
+   </form>
+     
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "homepage/base.html" %}
+{% block content %}
+<p style="color: green;">{{data}}</p>
+<div class="user-form-group">
+   <form action="/download/" class="user-form" method="POST">
+      {% csrf_token %}
+      <div class="form-button"><button type="submit">Download CSV File</button></div>
+   </form>&nbsp;
+   <form action="/download_excel/" class="user-form" method="POST">
+      {% csrf_token %}
+      <div class="form-button"><button type="submit">Download Excel File</button></div>
+    </form>       
+</div>
+{% endblock %}
